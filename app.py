@@ -5,7 +5,7 @@ import requests
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/api": {"origins": "https://vd1856.github.io"}})
 
 HUGGINGFACE_API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-base"
 HUGGINGFACE_API_TOKEN = os.environ.get("HF_TOKEN")
