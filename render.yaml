@@ -1,11 +1,9 @@
-
 services:
   - type: web
-    name: insurance-replier-hf-api
+    name: insurance-replier-api
     env: python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: ""
     startCommand: "python app.py"
-    plan: free
     envVars:
       - key: HF_TOKEN
-        sync: false
+        value: ${HF_TOKEN}
